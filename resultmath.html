@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm bg-dark">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a href="index.html" class="nav-link">Exercises</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link">Results</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link">Friends</a> 
+			</li>
+		</ul>
+	</nav>
+	<br><br>
+
+	<div id="chartContainer" style="height: 200px, width:75%"></div>
+
+	<script type="text/javascript">
+		window.onload=function(){
+			var one = 10;
+			var two = 20;
+			var chart = new CanvasJS.Chart("chartContainer", {
+				title:{
+					text:"Evolution of your results in doing mathematics basic calculations"
+				},
+				data:[
+				{
+					type:"column",
+					dataPoints:[
+						{label:"First", y:one},
+						{label:"Second", y:two}
+					]
+				}]
+
+				
+			});
+			chart.render();
+		
+		}
+	</script>
+
+</body>
+</html>
